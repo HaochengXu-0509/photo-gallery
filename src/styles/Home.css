@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%; 
+    color: white;
+    font-size: 1rem;
+    overflow: hidden; 
+  }
+
+.home-header, .home-hero {
+  position: relative;
+  z-index: 2; 
+}
+  
+  .home-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    z-index: 2;
+  }
+  
+  .home-header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    z-index: 2; 
+  }
+  
+  .home-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    z-index: 2;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .cta-button:hover,
+  .cta-button:focus {
+    background-color: #0056b3;
+  }
+  
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 25s infinite; 
+    z-index: 1; 
+  }
+  
+  @keyframes slide {
+    0% {
+      background-image: url('../images/Zhenjiang_1.jpg');
+    }
+    20% {
+      background-image: url('../images/Zhenjiang_2.jpg');
+    }
+    40% {
+      background-image: url('../images/Aurora_1.jpg');
+    }
+    60% {
+      background-image: url('../images/LA_1.jpg');
+    }
+    80% {
+      background-image: url('../images/Star_1.jpg');
+    }
+    100% {
+      background-image: url('../images/Zhenjiang_3.jpg');
+    }
+  }
+  
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -10;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+  
